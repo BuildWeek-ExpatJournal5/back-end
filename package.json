@@ -1,0 +1,33 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "- \r  - \r  -",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildWeek-ExpatJournal5/back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BuildWeek-ExpatJournal5/back-end/issues"
+  },
+  "homepage": "https://github.com/BuildWeek-ExpatJournal5/back-end#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "knex": "^0.21.5",
+    "pg": "^8.3.2",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
