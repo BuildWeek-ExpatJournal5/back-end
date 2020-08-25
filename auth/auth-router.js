@@ -8,7 +8,11 @@ const constants = require("../variables/constants");
 const requireEmail = require("./auth-mw/requireEmail");
 
 router.post("/register", validateFields, requireEmail, (req, res) => {
-  const user = req.body;
+  const user = {
+    username: req.body.username,
+    password: req.body.password,
+    email: req.body.email,
+  };
 
   const hash = bcrypt.hashSync(user.password, constants.ROUNDS);
 
