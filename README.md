@@ -26,6 +26,6 @@
 
 | Method | Endpoint            | Description                                                                                                                                    |
 | ------ | -------------       | ---------------------------------------------------------------------------------------------------------------------------------------------  |
-| POST   | /api//auth/register | Requires `username`, `password` and `email` fields in the request `body`. Returns a success message and the user's id                          |
+| POST   | /api//auth/register | Requires `username`, `password` and `email` fields in the request `body`. Returns a success message and the user's `id`                        |
 | POST   | /api//auth/login    | Requires `username` and `password` in body. Successful login returns success message and the `token`                                           |
                                                                  |
