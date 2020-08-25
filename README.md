@@ -33,5 +33,5 @@
 | GET   | /api/stories | Returns array of all stories                                                                                                                       |
 | GET   | /api/stories/user/:userId | Returns array of all stories posted by the specified user                                                                             |
 | GET   | /api/stories/storyId/:storyId | Returns the specified story                                                                                                       |
-| PUT   | /api/:storyId | Applies changes to any modified fields                                                                                                            |
-| DELETE   | /api/:storyId | Returns status 204 on a successful delete                                                                                                      |   
+| PUT   | /api/stories/:storyId | Applies changes to any modified fields                                                                                                            |
+| DELETE   | /api/stories/:storyId | Returns status 204 on a successful delete                                                                                                      |   
