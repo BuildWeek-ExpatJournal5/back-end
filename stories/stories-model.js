@@ -38,8 +38,8 @@ function editStory(id, changes) {
     return db("Stories")
       .where("id", id)
       .update(changes)
-      .then((ids) => {
-        return getStoryById(ids[0]);
+      .then((id) => {
+        return getStoryById(id);
       });
   } catch (error) {
     throw error;
