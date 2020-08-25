@@ -9,7 +9,7 @@ exports.up = function (knex) {
     .createTable("Stories", (tbl) => {
       tbl.increments("id").primary();
       tbl
-        .integer("user-id")
+        .integer("user_id")
         .unsigned()
         .references("id")
         .inTable("Users")
@@ -20,12 +20,12 @@ exports.up = function (knex) {
       tbl.text("body").notNullable();
       tbl.string("image_url", 255);
       tbl.string("location", 255);
-      tbl.timestamp("created_at");
+      tbl.timestamps(true, true);
     })
     .createTable("Comments", (tbl) => {
       tbl.increments("id").primary();
       tbl
-        .integer("story-id")
+        .integer("story_id")
         .unsigned()
         .references("id")
         .inTable("Stories")
@@ -33,7 +33,7 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       tbl
-        .integer("user-id")
+        .integer("user_id")
         .unsigned()
         .references("id")
         .inTable("Users")
@@ -45,7 +45,7 @@ exports.up = function (knex) {
     .createTable("Likes", (tbl) => {
       tbl.increments("id").primary();
       tbl
-        .integer("story-id")
+        .integer("story_id")
         .unsigned()
         .references("id")
         .inTable("Stories")
@@ -53,7 +53,7 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       tbl
-        .integer("user-id")
+        .integer("user_id")
         .unsigned()
         .references("id")
         .inTable("Users")
@@ -65,7 +65,7 @@ exports.up = function (knex) {
     .createTable("Favorites", (tbl) => {
       tbl.increments("id").primary();
       tbl
-        .integer("story-id")
+        .integer("story_id")
         .unsigned()
         .references("id")
         .inTable("Stories")
@@ -73,7 +73,7 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       tbl
-        .integer("user-id")
+        .integer("user_id")
         .unsigned()
         .references("id")
         .inTable("Users")

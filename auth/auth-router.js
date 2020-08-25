@@ -34,8 +34,9 @@ router.post("/login", validateFields, (req, res) => {
   users.selectBy({ username: username }).then(([user]) => {
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = signToken(user);
-
+      console.log(user);
       res.json({
+        userId: user.id,
         message: "Login successful",
         token,
       });
