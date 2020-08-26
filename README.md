@@ -7,7 +7,7 @@
 
  - Database created
  - Auth endpoints created
- - 
+ - Story endpoints created
 
 ### Tech Stack
 
