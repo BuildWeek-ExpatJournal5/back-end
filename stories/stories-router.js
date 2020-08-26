@@ -34,13 +34,7 @@ router.get("/user/:userId", (req, res) => {
 
   Stories.getStoriesByUser(userId)
     .then((stories) => {
-      if (stories.length > 0) {
-        return res.status(200).json(stories);
-      } else {
-        return res
-          .status(404)
-          .json({ message: "This user does not have any stories to display" });
-      }
+      return res.status(200).json(stories);
     })
     .catch((err) => {
       return res
