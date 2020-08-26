@@ -35,3 +35,12 @@
 | GET   | /api/stories/storyId/:storyId | Returns the specified story                                                                                                       |
 | PUT   | /api/stories/:storyId | Applies changes to any modified fields                                                                                                            |
 | DELETE   | /api/stories/:storyId | Returns status 204 on a successful delete                                                                                                      |   
+
+
+### Seeded Users
+
+| Username | Password |
+| -------- | -------- |
+| IG-88    |  password |
+| Boba Fett | password |
+| Dengar | password |
