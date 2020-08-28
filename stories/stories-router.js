@@ -7,7 +7,7 @@ router.post("/", (req, res) => {
 
   Stories.addStory(newStory)
     .then((story) => {
-      return res.status(200).json(story);
+      return res.status(201).json(story);
     })
     .catch((err) => {
       console.log(err);
@@ -67,7 +67,6 @@ router.put("/:storyId", (req, res) => {
 
   Stories.editStory(storyId, changes)
     .then((story) => {
-      console.log(story);
       return res.status(200).json(story);
     })
     .catch((err) => {
