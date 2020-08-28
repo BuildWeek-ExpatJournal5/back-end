@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const authRouter = require("../auth/auth-router");
 const storiesRouter = require("../stories/stories-router");
-const protected = require("../auth/auth-mw/protectedContent");
+const protectedContent = require("../auth/auth-mw/protectedContent");
 
 const server = express();
 
@@ -14,7 +14,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/api/auth", authRouter);
-server.use("/api/stories", protected, storiesRouter);
+server.use("/api/stories", protectedContent, storiesRouter);
 
 server.get("/", (req, res) => {
   res.json({ api: "up" });

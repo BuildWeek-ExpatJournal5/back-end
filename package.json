@@ -4,7 +4,7 @@
   "description": "- \r  - \r  -",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "server": "nodemon index.js",
     "start": "node index.js"
   },
@@ -29,6 +29,9 @@
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "jest": "^26.4.2",
+    "node-mocks-http": "^1.9.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }
